@@ -1,10 +1,16 @@
 import React from 'react'
+import { Header } from './components/Header'
+
+import logo from './assets/images/logo.svg'
+import iconMenu from './assets/images/icon-menu.svg'
+import iconMenuClose from './assets/images/icon-menu-close.svg'
 
 function App() {
   return (
-    <main className='main'>
-      <h1>OK!!!</h1>
-    </main>
+    <>
+      <Header logo={logo} iconMenuClose={iconMenuClose} iconMenu={iconMenu} />
+      <main className='main'></main>
+    </>
   )
 }
 
