@@ -5,6 +5,7 @@ export const SectionTop = (props) => {
     <section className='main__top'>
       <article className='article__left'>
         <picture>
+          <source media='(min-width: 768px)' srcSet={props.imageDesktop} />
           <img
             src={props.imageMobile}
             className='article__left-img'

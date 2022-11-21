@@ -8,6 +8,7 @@ import iconMenu from './assets/images/icon-menu.svg'
 import iconMenuClose from './assets/images/icon-menu-close.svg'
 
 import imageMobile from './assets/images/image-web-3-mobile.jpg'
+import imageDesktop from './assets/images/image-web-3-desktop.jpg'
 
 import imageRetroPcs from './assets/images/image-retro-pcs.jpg'
 import imageTopLaptops from './assets/images/image-top-laptops.jpg'
@@ -18,7 +19,7 @@ function App() {
     <>
       <Header logo={logo} iconMenuClose={iconMenuClose} iconMenu={iconMenu} />
       <main className='main container'>
-        <SectionTop imageMobile={imageMobile} />
+        <SectionTop imageDesktop={imageDesktop} imageMobile={imageMobile} />
         <SectionBottom
           imageRetroPcs={imageRetroPcs}
           imageTopLaptops={imageTopLaptops}

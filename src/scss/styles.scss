@@ -61,7 +61,7 @@ hr {
   height: 4rem;
 
   &__menu {
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 767px) {
       position: fixed;
       background-color: $Off-white;
       top: 0;
@@ -227,6 +227,11 @@ hr {
     grid-template-columns: 1fr 2fr;
     column-gap: 1.5rem;
 
+    &-img {
+      height: 100%;
+      object-fit: cover;
+    }
+
     &-content {
       &_number {
         color: $Grayish-blue;
@@ -253,6 +258,120 @@ hr {
         text-align: left;
         font-size: .938rem;
         line-height: 1.8;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 568px) {
+  .container {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .nav {
+    height: 5rem;
+
+    &__toggle,
+    &__close {
+      display: none;
+    }
+
+    &__list {
+      flex-direction: row;
+      column-gap: 1.5rem;
+    }
+
+    &__link {
+      color: $Dark-grayish-blue;
+    }
+  }
+
+  .main {
+    &__bottom {
+      grid-template-columns: 1fr 1fr;
+      column-gap: 2.5rem;
+    }
+  }
+
+  .article {
+    &__left {
+      row-gap: 1.5rem;
+
+      &-img {
+        height: 100%;
+      }
+
+      &-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        &_title {
+          font-size: 3rem;
+          margin-bottom: 0;
+          margin-right: 2rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .container {
+    max-width: 1000px;
+  }
+
+  .nav {
+    height: 6rem;
+
+    &__logo {
+      &-img {
+        width: 4rem;
+      }
+    }
+
+    &__list {
+      column-gap: 3rem;
+    }
+
+    &__link {
+      font-size: 1rem;
+    }
+  }
+
+  .main {
+    margin-top: 7rem;
+    margin-bottom: 6rem;
+
+    &__top {
+      grid-template-columns: 2fr 1fr;
+      column-gap: 2rem;
+    }
+
+    &__bottom {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1100px;
+  }
+
+  .article {
+    &__left {
+      &-content {
+        &_info {
+          margin-right: 1rem;
+        }
       }
     }
   }
