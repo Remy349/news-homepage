@@ -104,9 +104,26 @@ hr {
     color: $Very-dark-blue;
     font-size: 1.2rem;
     transition: .3s;
+    position: relative;
+
+    &::after {
+      content: '';
+      background-color: $Soft-red;
+      position: absolute;
+      height: 2px;
+      top: 1.7rem;
+      width: 100%;
+      left: 0;
+      transform: scaleX(0);
+      transition: .3s;
+    }
 
     &:hover {
       color: $Soft-red;
+
+      &::after {
+        transform: scaleX(1);
+      }
     }
   }
 }
@@ -117,11 +134,18 @@ hr {
 
 .main {
   margin-top: 5rem;
-  margin-bottom: 4rem;
+  margin-bottom: 5rem;
+  display: grid;
+  row-gap: 4rem;
 
   &__top {
     display: grid;
     row-gap: 5rem;
+  }
+
+  &__bottom {
+    display: grid;
+    row-gap: 2.5rem;
   }
 }
 
@@ -192,6 +216,41 @@ hr {
 
       &_info {
         color: $Grayish-blue;
+        font-size: .938rem;
+        line-height: 1.8;
+      }
+    }
+  }
+
+  &__more {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 1.5rem;
+
+    &-content {
+      &_number {
+        color: $Grayish-blue;
+        font-size: 2rem;
+        text-align: left;
+        margin-bottom: .5rem;
+      }
+
+      &_title {
+        color: $Very-dark-blue;
+        text-align: left;
+        font-size: 1.13rem;
+        margin-bottom: .7rem;
+        transition: .3s;
+        cursor: pointer;
+
+        &:hover {
+          color: $Soft-red;
+        }
+      }
+
+      &_info {
+        color: $Dark-grayish-blue;
+        text-align: left;
         font-size: .938rem;
         line-height: 1.8;
       }
